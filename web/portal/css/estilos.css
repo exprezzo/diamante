@@ -1,0 +1,52 @@
+@font-face {
+	font-family: "Accidental Presidency";
+	src:  url("../fonts/accidentalpresidency/accid___.woff") format("woff"), url(../fonts/accidentalpresidency/accid___.ttf) format("truetype");
+}
+img{border:none;}
+body{background-color: #464646;}
+.header{background-image: url('../imagenes/fondo_header.png');width: 979px;height: 78px; display:inline-block; color:white; text-align:center; border-bottom:3px solid white;}
+body{padding:0;margin:0;}
+.portal{width: 979px; left:50%; margin-left:-489.5px; position:absolute; box-shadow: 0 6px 32px 2px black;}
+.header div{  line-height:77px; display:inline-block; font-family:"Arial";}
+.header .titulo1{color:#74cbed; font-size:26.22px; *display: inline; }
+.header .titulo2{font-size:18.94px; vertical-align:top; *display: inline;	}
+.banner_wrap{height: 266px;}
+.banner{height: 266px; display:inline-block; color:white; }
+.sombra_banner{background-image: url('../imagenes/sombra_banner.png');width: 979px;height: 34px; display:inline-block; color:white; margin-top:-5px; }
+.slider{width:316px; height:252px; background-color:#046ca0; border:7px solid #046ca0; vertical-align:top; display:inline-block; *display: inline; float:left;}
+.banner_derecha{display:inline-block; *display: inline;}
+.botones_slider .boton{ border: 3px solid transparent; border-radius: 50%;width: 8px;height: 8px; background-color: #046ca0; display:inline-block; *display: inline; cursor:pointer; }
+.botones_slider { text-align: center;margin-top: -28px;}
+.botones_slider .boton.activo{ border: 3px solid #00afef;}
+.botones_slider .boton:hover{ border: 3px solid white; }
+.menu_box{width:331px; height:760px; background-color:#cccccb;  float:left; background-image: url(../imagenes/menu_bkg.jpg);  }
+.contenido{width:634px; height:746px; background-color:#eeeeee; float:left; border: 7px solid white;}
+.footer{clear:both;width: 979px; color:white; }
+.footer a{text-decoration:none;  color:#c9c9c9;}
+.footer li{list-style-type: none;}
+.footer_arriba{width:100%; height:149px; background-color:black;}
+.footer_left{display:inline-block; font-family: "Arial"; font-size:14px; padding-top:15px; margin-left:46px; width:285px;}
+.footer_left ul{padding:0; margin:0; margin-left: 86px; position: absolute;}
+.footer_left ul li{list-style-image:url('../imagenes/flecha.png');}
+
+.footer_right{display:inline-block; vertical-align:top; width:642px; text-align:center; margin-top:31px;}
+.footer_abajo{width:100%; height:45px; background-color:white; text-align:center; color:black;}
+.footer_abajo label{line-height:45px; font-family:"Times New Roman"}
+
+.menu_item{width:235px; margin-bottom:41px;  margin-left:32px;  }
+.menu_item a{text-decoration:none;}
+.menu_header{background-image: url(../imagenes/menu_item_bkg.png); background-repeat:no-repeat; font-family: "Accidental Presidency", sans-serif; color:#464646;}
+.menu_header div{margin-top: 2px;position: relative;display: inline-block;font-size: 25px;margin-left: 6px; cursor:pointer; }
+.menu_items{margin-top:64px;}
+.menu_divisor{width:225px; height:2px; background-color: #4e4e4e;  display:inline-block; position:absolute; text-align:center; margin-left:4px;  margin-top:4px; }
+.menu_descripcion{font-size:15px; text-align:center; margin-top:9px; font-family: "Accidental Presidency", sans-serif; color:#4f4f4f;}
+.links_interes{left: 50%;position: relative;margin-left: -53.5px;}
+
+.contenido{background-image:url(../imagenes/fondo_contenido.png);}
+.contenido h2{ font-family:"Accidental Presidency"; font-size:25px; font-weight:normal; padding:0; margin:0; margin-top:20px;}
+
+.caja_datos{display:block; margin-bottom:10px; }
+.caja_datos label{width:190px; text-align:right;display:inline-block; font-family:"Accidental Presidency", sans-serif; font-size:18px; position:absolute; right:437px; }
+.caja_datos input{background-image: url(../imagenes/fondo_caja.png);width: 204px;height: 20px;border: 0;background-repeat: no-repeat; font-size: 12px;font-style: italic;}
+#form_password .caja_datos label{right:250px;}
+#form_recarga .caja_datos label{right:250px;}
