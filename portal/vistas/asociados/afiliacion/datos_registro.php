@@ -12,7 +12,7 @@
 			<label>APELLIDOS</label><input type="text" name="Apellidos" /> 
 		</div>
 		<div class="caja_datos">
-			<label>FECHA DE NACIMIENTO</label><input type="text" name="FechaNac"/> 
+			<label>FECHA DE NACIMIENTO</label><input type="text" readonly name="FechaNac"/> 
 		</div>
 		<div class="caja_datos">
 			<label>DIRECCION</label><input type="text" name="Direccion" />

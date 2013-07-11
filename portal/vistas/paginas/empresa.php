@@ -11,9 +11,14 @@
 		<h2>¿QUIENES SOMOS?</h2>	
 		<img src="<?php echo $MOD_WEB_PATH; ?>imagenes/separador_formulario.png" />
 		<p style=" ">
-		Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. 
-		</p>
-		<p>
-			Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+		Diamond people S.A. de C.V. es una empresa mexicana legalmente constituida que nace ante la 
+		necesidad de generar nuevas y mejores  fuentes de  ingresos para las familias mexicanas y sus hogares. <br />
+Nuestro Objetivo primordial es y será crear un grupo solido de personas en constante crecimiento 
+personal y profesional basado en la prosperidad de nuestras vidas y en la buena integración 
+familiar mediante la eliminación de escases y carencias. Que por medio del consumo de tiempo 
+aire y la creación de una red de consumidores, el afiliado obtenga un ingreso adicional, obtenido 
+la posibilidad de recibir regalías por la generación de la red y que esta fuente de ingresos pueda 
+heredarla a sus descendientes  mejorando así su estilo de vida. <br />
+Las recargas telefónicas aplican para cualquier tipo de compañía existente en nuestro país.
 		</p>
 	</div>

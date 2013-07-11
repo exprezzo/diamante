@@ -22,7 +22,13 @@
 </style>
 <![endif]-->
 <script src="<?php echo $MOD_WEB_PATH; ?>js/paginas/afiliate.js"></script>
-<script src="<?php echo $APP_PATH; ?>web/libs/jquery-1.8.3.js" ></script>
+
+
+
+
+
+
+
 <script type="text/javascript">	
 	$(document).ready(function(){			
 		
@@ -50,16 +56,16 @@
 					<label class="etiqueta">Clave:</label>
 					<label class="info" name="clave">3345</label>		
 				</div>
-				<div >
+				<div style="margin-bottom:20px;">
 					<label class="etiqueta">Nombre:</label>
 					<label class="info" name="nombre">EL nombre del Socio:</label>
 				</div>
-				<div>
+				<div style="display:inline-block;  vertical-align: middle;">
 						<br>
 						<label>¿Esta persona fue quien te invito?</label>
 						<br><br>			
 				</div>
-				<div style="">
+				<div style="display:inline-block; ">
 					<button class="btn_si" type="button">SI</button>
 					<button class="btn_no" type="button">NO</button>
 				</div>		

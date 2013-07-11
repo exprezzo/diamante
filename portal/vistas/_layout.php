@@ -3,6 +3,12 @@
 <head>
 	<!--meta http-equiv="X-UA-Compatible" content="IE=8"/-->
 	<link type="text/css"rel="StyleSheet" href="<?php echo $MOD_WEB_PATH; ?>css/estilos.css" />
+	
+	
+	<script src="<?php echo $APP_PATH; ?>web/libs/jquery-1.8.3.js" ></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" ></script>
+	
+	<link type="text/css"rel="StyleSheet" href="http://code.jquery.com/ui/1.10.3/themes/dark-hive/jquery-ui.css" />
 	<!--[if IE]>
 	<style>
 		.slider{height:253px;}

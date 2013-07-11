@@ -16,27 +16,36 @@ var Afiliate={
 	},
 	configPaso2:function(){
 		var me=this;
-		$('.contenido .afiliate .btn_no').bind('click',function(){
-			me.socio = {};
-			$('.contenido .afiliate .paso2').fadeOut();
-			$('.contenido .afiliate .paso1').fadeIn();				
-			$('#form_buscar_socio [name="asociado_id"]').select();
-		});
-		
-		$('.contenido .afiliate .btn_si').bind('click',function(){
-			$('#datos_registro [name="InvitadoPor_SocioId"]').val(me.socio.clave);
-			$('#datos_registro .anfitrion').html(me.socio.clave + ' ' + me.socio.nombre);
-			
-			
-			$('.contenido .afiliate .paso2').fadeOut();
-			$('.contenido .afiliate .paso3').fadeIn();			
-		});
+				
+		$( ".contenido .afiliate .btn_si" )
+		  .button()
+		  .click(function( event ) {
+				$('#datos_registro [name="InvitadoPor_SocioId"]').val(Afiliate.socio.clave);
+				$('#datos_registro .anfitrion').html(Afiliate.socio.clave + ' ' + Afiliate.socio.nombre);				
+				$('.contenido .afiliate .paso2').fadeOut();
+				$('.contenido .afiliate .paso3').fadeIn();			
+		  });
+		  
+		 $( ".contenido .afiliate .btn_no" )
+		  .button()
+		  .click(function( event ) {
+				Afiliate.socio = {};
+				$('.contenido .afiliate .paso2').fadeOut();
+				$('.contenido .afiliate .paso1').fadeIn();				
+				$('#form_buscar_socio [name="asociado_id"]').select();
+		  });
 	},
 	configPaso3:function(){
 		var me=this;
-		$('#datos_registro .btn_guardar').bind('click', function(){
-			me.registrar();
-		});
+		$( "#datos_registro .btn_guardar" )
+		  .button()
+		  .click(function( event ) {
+				me.registrar();
+		  });
+		  
+		 $('#datos_registro [name="FechaNac"]').datepicker();
+		 
+		  
 	},
 	configPaso4:function(){
 		var me=this;
@@ -169,7 +178,7 @@ var Afiliate={
 			// console.log("resp"); console.log(resp);			
 			if (resp.success){
 				console.log("SUCEESS");
-				me.socio = {
+				Afiliate.socio = {
 					clave	:resp.socio.SocioID,
 					nombre	:resp.socio.Nombres + ' ' + resp.socio.Apellidos
 				};

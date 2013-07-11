@@ -3,7 +3,7 @@
 	src:  url("../fonts/accidentalpresidency/accid___.woff") format("woff"), url(../fonts/accidentalpresidency/accid___.ttf) format("truetype");
 }
 img{border:none;}
-body{background-color: #464646;}
+body{background-color: #464646;background-image:url(../imagenes/patternfondodiamondpeople.png);background-size:4px;}
 .header{background-image: url('../imagenes/fondo_header.png');width: 979px;height: 78px; display:inline-block; color:white; text-align:center; border-bottom:3px solid white;}
 body{padding:0;margin:0;}
 .portal{width: 979px; left:50%; margin-left:-489.5px; position:absolute; box-shadow: 0 6px 32px 2px black;}
