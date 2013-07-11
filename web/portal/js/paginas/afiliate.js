@@ -168,6 +168,7 @@ var Afiliate={
 			var resp = eval('(' + response + ')');
 			// console.log("resp"); console.log(resp);			
 			if (resp.success){
+				console.log("SUCEESS");
 				me.socio = {
 					clave	:resp.socio.SocioID,
 					nombre	:resp.socio.Nombres + ' ' + resp.socio.Apellidos
