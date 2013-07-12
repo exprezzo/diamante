@@ -1,7 +1,7 @@
 <div class="menu_box">
 	<div class="menu_items">
 		<div class="menu_item">
-			<a href="<?php echo $APP_PATH; ?>asociados/afiliate">
+			<a href="<?php echo $APP_PATH; ?>asociados/afiliate#contenido">
 				<div class="menu_header">
 					<div>AFILIATE</div>
 				</div>
@@ -10,7 +10,7 @@
 			</a>
 		</div>
 		<div class="menu_item">
-			<a href="<?php echo $APP_PATH; ?>paginas/oficina">
+			<a href="<?php echo $APP_PATH; ?>oficina/entrar#contenido">
 				<div class="menu_header">
 					<div>OFICINA VIRTUAL</div>
 				</div>
@@ -19,7 +19,7 @@
 			</a>
 		</div>
 		<div class="menu_item">
-			<a href="<?php echo $APP_PATH; ?>paginas/empresa">
+			<a href="<?php echo $APP_PATH; ?>paginas/empresa#contenido">
 				<div class="menu_header">
 					<div>EMPRESA</div>
 				</div>
@@ -28,7 +28,7 @@
 			</a>
 		</div>
 		<div class="menu_item">
-			<a href="<?php echo $APP_PATH; ?>paginas/preguntas">
+			<a href="<?php echo $APP_PATH; ?>paginas/preguntas#contenido">
 				<div class="menu_header">
 					<div>PREGUNTAS FRECUENTES</div>
 				</div>
@@ -37,7 +37,7 @@
 			</a>
 		</div>
 		<div class="menu_item">
-			<a href="<?php echo $APP_PATH; ?>paginas/plan">
+			<a href="<?php echo $APP_PATH; ?>paginas/plan#contenido">
 				<div class="menu_header">
 					<div>PLAN DE COMPENSACI&Oacute;N</div>
 				</div>
@@ -46,7 +46,7 @@
 			</a>
 		</div>
 		<div class="menu_item">
-			<a href="<?php echo $APP_PATH; ?>paginas/videos">
+			<a href="<?php echo $APP_PATH; ?>paginas/videos#contenido">
 				<div class="menu_header">
 					<div>VIDEOS</div>
 				</div>
@@ -55,7 +55,7 @@
 			</a>
 		</div>
 		<div class="menu_item">
-			<a href="<?php echo $APP_PATH; ?>paginas/contacto">
+			<a href="<?php echo $APP_PATH; ?>paginas/contacto#contenido">
 				<div class="menu_header">
 					<div>CONTACTO</div>
 				</div>

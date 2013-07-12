@@ -1,5 +1,6 @@
 <?php
 require_once $APPS_PATH.$_PETICION->modulo.'/modelos/asociado_modelo.php';
+require_once $APPS_PATH.$_PETICION->modulo.'/modelos/compania_modelo.php';
 class asociados extends Controlador{
 	var $modelo="asociado";
 	var $campos=array('SocioID','Nombres','Apellidos','FechaNac','Direccion','Colonia','Ciudad','EstadoId','CodigoPostal','Celular','CompaniaId','CotitularNombre','CotitularFechaNac','CLABE','BancoID');
@@ -29,11 +30,50 @@ class asociados extends Controlador{
 		
 	}
 	
-	function guardar(){
+	
+	function afiliate(){
+		$compMod = new companiaModelo();
+		$res = $compMod->buscar( array() );
+		
+		$vista = $this->getVista();
+		$vista->companias = $res['datos'];		
+		$this->mostrarVista();
+	}
+	
+	function registrar(){
+	
+		// $res=array(
+			// 'success'=>false,
+			// 'msg'=>'TEST'
+		// );		
+		// echo json_encode($res); exit;
+		
+		$fecha=DateTime::createFromFormat ( 'Y/m/d' , $_POST['datos']['FechaNac'] );
+		$_POST['datos']['FechaNac'] = $fecha->format('Y-m-d');
+		
+		if ( !empty( $_POST['datos']['CotitularFechaNac'] ) ){
+			$fecha=DateTime::createFromFormat ( 'Y/m/d' , $_POST['datos']['CotitularFechaNac'] );
+			if ( $fecha ){ 
+				$_POST['datos']['CotitularFechaNac'] = $fecha->format('Y-m-d'); 
+			}else{
+				$_POST['datos']['CotitularFechaNac']='';
+			}
+			
+		}
+		
+		
+		//Nombres
+		//Apellidos
+		//FechaNac //2013/7/23
+		//Celular
+		//CompaniaId
+		//CotitularFechaNac
+		
 		$res = parent::guardar();
 		
 		if ( $res['success'] && !empty($res['datos']) && !empty($res['datos']['SocioID'])  ){
 			$_SESSION['NuevoSocioID'] = $res['datos']['SocioID'];			
+			$_SESSION['Socio'] = $res['datos'];			
 		}
 		
 	}
@@ -72,6 +112,12 @@ class asociados extends Controlador{
 		
 		$res = $modelo->guardar($params);
 		unset ($res['datos']);
+		if ($res['success']){
+			$_SESSION['AuthInfo']['IsLoged']=true;
+			$_SESSION['AuthInfo']['UserInfo']=$_SESSION['Socio'];
+			unset($_SESSION['Socio']);
+			unset($_SESSION['NuevoSocioID']);
+		}
 		echo json_encode( $res );
 		
 	}

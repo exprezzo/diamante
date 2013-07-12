@@ -30,8 +30,13 @@ class asociadoModelo extends Modelo{
 			$params['SocioID'] = $id;
 			//--------------------------------------------
 			$sql='INSERT INTO '.$this->tabla.' SET ';
-			foreach($params as $key=>$val){
-				$sql.="$key=:$key, ";
+			foreach($params as $key=>$val){	
+				if ($key == 'password'){
+					$sql.="$key=md5(:$key), ";
+				}else{
+					$sql.="$key=:$key, ";
+				}
+				
 			}
 			$sql=substr($sql, 0, strlen($sql)-2 );
 			
@@ -48,7 +53,12 @@ class asociadoModelo extends Modelo{
 			$sql='UPDATE '.$this->tabla.' SET ';
 			foreach($params as $key=>$val){
 				if ($key==$this->pk ) continue;
-				$sql.="$key=:$key, ";
+				if ($key == 'password'){
+					$sql.="$key=md5(:$key), ";
+				}else{
+					$sql.="$key=:$key, ";
+				}
+				
 			}
 			$sql=substr($sql, 0, strlen($sql)-2 );
 			$sql.=' WHERE '.$this->pk.'=:'.$this->pk;

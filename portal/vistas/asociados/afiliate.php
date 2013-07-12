@@ -6,8 +6,8 @@
 	.afiliate{text-align:center; color:#464646;}
 	img{border:none;}
 	.datos label{}
-	.boton_buscar{background-image: url(<?php echo $MOD_WEB_PATH; ?>imagenes/btn_buscar.png);width: 90px;height: 29px;background-repeat: no-repeat;display: inline-block;position: absolute; margin-top:-4px; margin-left:10px; }
-	.boton_buscar:hover{background-image: url(<?php echo $MOD_WEB_PATH; ?>imagenes/btn_buscar_hover.png); cursor:pointer;}
+	
+	
 	
 	.datos_del_anfitrion .etiqueta{ font-size:18px; width:68px; display:inline-block;}
 	.datos_del_anfitrion .info{font-family:'Accidental Presidency'; font-size:28px;}
@@ -37,15 +37,15 @@
 </script>
 
 <div class="afiliate">
-	<h2>AFILIATE</h2>	
-	<img src="<?php echo $MOD_WEB_PATH; ?>imagenes/separador_formulario.png" />
+	<h2 class="titulo">AFILIATE</h2>	
+	<img class="imagen_titulo" src="<?php echo $MOD_WEB_PATH; ?>imagenes/separador_formulario.png" />
 	<div class="pasos_afiliacion">
 		<div class="paso1" style="position:absolute;display:visible;">
 			<form id="form_buscar_socio">
 			<div class="caja_datos" style="text-align: left;margin-left: 168px;margin-top:20px; ">		
 				<label style="text-align:left; display:block; width:auto;position:relative;right:auto;margin-bottom:8px;">Ingresa la clave del Socio que te invitó</label>
-				<input type="text" name="asociado_id"/> 		
-				<div class="boton_buscar" ></div>
+				<input type="text" name="asociado_id" value="9501"/> 		
+				<button class="boton_buscar" >BUSCAR</button>
 				<div class="error" style='color:red;font-family:"Accidental Presidency", sans-serif;margin-top:8px;'></div>
 			</div>
 			</form>	
@@ -71,10 +71,10 @@
 				</div>		
 			</div>
 		</div>
-		<div class="paso3" style="position:absolute;display:none; margin-left:26px; ">
+		<div class="paso3" style="position:absolute;display:none;   width:634px; ">
 			<?php include '../portal/vistas/asociados/afiliacion/datos_registro.php'; ?>
 		</div>
-		<div class="paso4" style="position:absolute;display:none; margin-left:185px; ">
+		<div class="paso4" style="position:absolute;display:none; width:634px; ">
 			<?php include '../portal/vistas/asociados/afiliacion/password.php'; ?>
 		</div>
 		<div class="paso5" style="position:absolute;display:none; margin-left:185px; ">
