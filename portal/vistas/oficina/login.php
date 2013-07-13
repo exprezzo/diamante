@@ -7,7 +7,7 @@
 
 <h2 style="margin-left:20px;">Oficina Virtual</h2>		
 
-<form action="<?php echo $APP_PATH; ?>oficina/entrar#contenido" id="login_oficina" style="width=633px; text-align:center;" method="POST">
+<form action="<?php echo $APP_PATH; ?>oficina/entrar#user_header" id="login_oficina" style="width=633px; text-align:center;" method="POST">
 	<div class="" style="margin-top:200px;">
 		<h2>Login</h2>		
 		<img src="<?php echo $MOD_WEB_PATH; ?>imagenes/separador_formulario.png" />								

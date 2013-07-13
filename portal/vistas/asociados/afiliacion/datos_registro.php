@@ -22,6 +22,9 @@
 			<label>FECHA DE NACIMIENTO</label><input type="text" name="FechaNac"/> <div class="error FechaNac"></div>
 		</div>
 		<div class="caja_datos">
+			<label>Email</label><input type="text" name="Email"/> <div class="error Email"></div>
+		</div>
+		<div class="caja_datos">
 			<label>DIRECCION</label><input type="text" name="Direccion" />
 		</div>
 		<div class="caja_datos">

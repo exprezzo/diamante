@@ -60,3 +60,4 @@ body{padding:0;margin:0;}
 #form_recarga .caja_datos label{right:250px;}
 #datos_registro .wijmo-wijinput{width:172px; height:27px; font-size:14px;}
 #contenido .ui-button span{font-size:14px;}
+#datos_registro .caja_datos label{margin-left:31px;}

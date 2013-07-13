@@ -79,6 +79,9 @@ var Afiliate={
 		$("#datos_registro [name='Apellidos']").bind('keypress',function(){
 			$("#datos_registro .error.Apellidos").html('');
 		});
+		$("#datos_registro [name='Email']").bind('keypress',function(){
+			$("#datos_registro .error.Email").html('');
+		});
 		$("#datos_registro [name='Celular']").bind('keypress',function(){
 			$("#datos_registro .error.Celular").html('');
 		});
@@ -169,34 +172,41 @@ var Afiliate={
 	validarDatosRegistro:function(){
 		var errores=0;
 		
+		var dato='';
 		
-		var nombres= $("#datos_registro [name='Nombres']").val();
-		if (nombres==""){
+		dato= $("#datos_registro [name='Nombres']").val();
+		if (dato==""){
 			$("#datos_registro .error.Nombres").html('Escriba su Nombre');
 			// $("#datos_registro [name='Nombres']").addClass('ui-state-error');
 			errores++;
 		}
 		
-		var apellidos= $("#datos_registro [name='Apellidos']").val();
-		if (apellidos==""){
+		dato= $("#datos_registro [name='Apellidos']").val();
+		if (dato==""){
 			$("#datos_registro .error.Apellidos").html('Escriba sus Apellidos');
 			errores++;
 		}
 		
-		var fechaNac = $("#datos_registro  [name='FechaNac']").wijinputdate("getPostValue");
-		if (fechaNac==""){
+		dato = $("#datos_registro  [name='FechaNac']").wijinputdate("getPostValue");
+		if (dato==""){
 			$("#datos_registro .error.FechaNac").html('Proporcione su fecha de nacimiento');
 			errores++;
 		}
 		
-		var celular = $("#datos_registro [name='Celular']").val();
-		if (celular==""){
+		dato= $("#datos_registro [name='Email']").val();
+		if (dato==""){
+			$("#datos_registro .error.Email").html('Escriba su Email');
+			errores++;
+		}
+		
+		dato = $("#datos_registro [name='Celular']").val();
+		if (dato==""){
 			$("#datos_registro .error.Celular").html('Proporcione su número de celular');
 			errores++;
 		}
 		
-		var selectedIndex = $("#datos_registro [name='CompaniaId']").wijcombobox("option","selectedIndex");  
-		if (selectedIndex==-1){
+		dato = $("#datos_registro [name='CompaniaId']").wijcombobox("option","selectedIndex");  
+		if (dato==-1){
 			$("#datos_registro .error.CompaniaId").html('Seleccione la compañia');
 			errores++;
 		}

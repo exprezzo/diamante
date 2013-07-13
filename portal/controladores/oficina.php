@@ -15,6 +15,9 @@ class Oficina extends Controlador{
 		global $APP_PATH;			
 		header('Location: '.$APP_PATH.'oficina/entrar#contenido');
 	}
+	
+	var $nivel=0;
+	
 	function entrar(){
 		//Si tiene sesion, mostrar el dashboard de socio
 		//Si no tiene sesion, mostrar el login
@@ -30,6 +33,11 @@ class Oficina extends Controlador{
 				return $this->mostrarVista();
 			}			
 		}else{
+			$SocioId=$_SESSION['AuthInfo']['UserInfo']['SocioID'];
+			$mapa=$this->getMapa($SocioId);
+			
+			$vista=$this->getVista();
+			$vista->mapa=$mapa;
 			$_PETICION->accion='dashboard';
 			return $this->mostrarVista();
 		}
@@ -37,6 +45,12 @@ class Oficina extends Controlador{
 		//SIN SESION, PETICION POST
 		$res = $this->login();
 		if ($res['success']){
+			$SocioId=$_SESSION['AuthInfo']['UserInfo']['SocioID'];
+			$mapa=$this->getMapa($SocioId);
+			
+			$vista=$this->getVista();
+			$vista->mapa=$mapa;
+			
 			$_PETICION->accion='dashboard';			
 			// exit;
 		}else{
@@ -44,6 +58,35 @@ class Oficina extends Controlador{
 		}
 		$this->mostrarVista();
 	}
+	
+	function getMapa($SocioId){
+		$this->nivel++;
+		if ($this->nivel > 3) return array();
+		$sql='SELECT SocioID, Nombres, Apellidos FROM asociados WHERE InvitadoPor_SocioId=:InvitadoPor_SocioId';
+		$mod= new Modelo();
+		$pdo=$mod->getPdo();
+		$sth = $pdo->prepare($sql);		
+		// $SocioId=$_SESSION['AuthInfo']['UserInfo']['SocioID'];		
+		$sth->bindValue(':InvitadoPor_SocioId', $SocioId, PDO::PARAM_STR);
+		
+		$exito = $sth->execute();
+		
+		if (!$exito){
+			$error = $mod->getError($sth);
+			echo json_enode( $error ); 
+			exit;
+		}
+		$res = $sth->fetchAll(PDO::FETCH_ASSOC);
+		// print_r($res);
+		for($i=0; $i < sizeof($res); $i++ ){
+			
+			$res[$i]['invitados']=$this->getMapa( $res[$i]['SocioID'] );
+		}
+		//
+		return $res;
+	}
+	
+	
 	
 	function login(){
 		

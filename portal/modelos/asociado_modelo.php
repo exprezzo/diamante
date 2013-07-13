@@ -1,7 +1,7 @@
 <?php
 class asociadoModelo extends Modelo{
 	var $tabla="asociados";
-	var $campos=array('SocioID','Nombres','Apellidos','FechaNac','Direccion','Colonia','Ciudad','EstadoId','CodigoPostal','Celular','CompaniaId','CotitularNombre','CotitularFechaNac','CLABE','BancoID','fk_user');
+	var $campos=array('SocioID','Nombres','Apellidos','FechaNac','Direccion','Colonia','Ciudad','EstadoId','CodigoPostal','Celular','CompaniaId','CotitularNombre','CotitularFechaNac','CLABE','BancoID');
 	var $pk="SocioID";
 	
 	function obtenerSiguienteId(){

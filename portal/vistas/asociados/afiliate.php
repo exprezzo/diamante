@@ -1,3 +1,7 @@
+	
+	<script src="<?php echo $APP_PATH; ?>web/libs/wijmo3.2/js/jquery.wijmo-open.all.3.20131.7.min.js" type="text/javascript"></script>
+	<script src="<?php echo $APP_PATH; ?>web/libs/wijmo3.2/js/jquery.wijmo-pro.all.3.20131.7.min.js" type="text/javascript"></script>
+	
 <?php 
 	unset( $_SESSION['NuevoSocioID'] );  //esta variable se usa en el proceso de registro, contendra el ID del nuevo socio
 ?>

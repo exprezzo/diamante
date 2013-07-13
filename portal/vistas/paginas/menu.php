@@ -10,7 +10,14 @@
 			</a>
 		</div>
 		<div class="menu_item">
-			<a href="<?php echo $APP_PATH; ?>oficina/entrar#contenido">
+			<?php
+				if ( !empty($_SESSION['AuthInfo']) && !empty($_SESSION['AuthInfo']['IsLoged']) ){
+					$link='user_header';
+				}else{
+					$link='contenido';
+				}
+			?>
+			<a href="<?php echo $APP_PATH; ?>oficina/entrar#<?php echo $link ?>">
 				<div class="menu_header">
 					<div>OFICINA VIRTUAL</div>
 				</div>
