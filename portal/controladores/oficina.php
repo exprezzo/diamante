@@ -1,12 +1,26 @@
 <?php
 class Oficina extends Controlador{
-	function mostrarVista($vistaFile=''){	
-		$vista= $this->getVista();	
+	function servir(){
+		//-----------------------------------------
+		//SEGURIDAD
 		global $_PETICION;		
+		$permitidas=array('entrar','login','salir');		
+		if ( !in_array($_PETICION->accion, $permitidas)  ){
+			if ( empty($_SESSION['AuthInfo']) || empty($_SESSION['AuthInfo']['IsLoged']) ){			
+				return $this->entrar();
+			}
+		}
+		//-----------------------------------------
+		parent::servir();
+	}
+	function mostrarVista($vistaFile=''){	
+		global $_PETICION;				
+		$vista= $this->getVista();
+		
 		if ( $_PETICION->accion == 'edicion' ||  $_PETICION->accion == 'busqueda'){
 			return $vista->mostrar( );
 		}else{
-			return $vista->mostrar( '/_layout',true);
+			return $vista->mostrar( '/_oficina',true);
 		}
 		
 	}
@@ -17,7 +31,10 @@ class Oficina extends Controlador{
 	}
 	
 	var $nivel=0;
-	
+	// function mapa(){
+		// $SocioId=$_SESSION['AuthInfo']['UserInfo']['SocioID'];
+		// $mapa=$this->getMapa($SocioId);
+	// }
 	function entrar(){
 		//Si tiene sesion, mostrar el dashboard de socio
 		//Si no tiene sesion, mostrar el login
@@ -59,9 +76,16 @@ class Oficina extends Controlador{
 		$this->mostrarVista();
 	}
 	
-	function getMapa($SocioId){
-		$this->nivel++;
-		if ($this->nivel > 3) return array();
+	function mapa(){
+		$SocioId=$_SESSION['AuthInfo']['UserInfo']['SocioID'];
+		$mapa=$this->getMapa($SocioId);
+		$vista=$this->getVista();
+		$vista->mapa=$mapa;
+		$this->mostrarVista();
+	}
+	function getMapa($SocioId, $nivel=0){
+		$nivel++;
+		if ($nivel > 3) return array();
 		$sql='SELECT SocioID, Nombres, Apellidos FROM asociados WHERE InvitadoPor_SocioId=:InvitadoPor_SocioId';
 		$mod= new Modelo();
 		$pdo=$mod->getPdo();
@@ -80,7 +104,7 @@ class Oficina extends Controlador{
 		// print_r($res);
 		for($i=0; $i < sizeof($res); $i++ ){
 			
-			$res[$i]['invitados']=$this->getMapa( $res[$i]['SocioID'] );
+			$res[$i]['invitados']=$this->getMapa( $res[$i]['SocioID'], $nivel );
 		}
 		//
 		return $res;

@@ -1,12 +1,16 @@
+<script src="<?php echo $APP_PATH; ?>web/libs/wijmo3.2/js/jquery.wijmo-open.all.3.20131.7.min.js" type="text/javascript"></script>
+<script src="<?php echo $APP_PATH; ?>web/libs/wijmo3.2/js/jquery.wijmo-pro.all.3.20131.7.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 	$(function(){
-		 // $("#tree").wijtree();
+		$.wijmo.wijtreenode.prototype.options.expanded = true;
+		  $("#tree").wijtree();
 		 // $("#tree").wijtreenode({expanded: false});
 	});
 </script>
 <style>
-	#mapa{width: 634px;height: 653px;overflow: scroll;}
-	#mapa li{font-decoration:none; display:block; margin:17px; cursor:pointer;}
+	#mapa{width: 634px;height: 747px;overflow: scroll;}
+	#mapa .wijmo-wijtree{background:none; border:none; }
+	/* #mapa li{font-decoration:none; display:block; margin:17px; cursor:pointer;}
 	#mapa li span{
 		border:2px #8298bb solid;
 		border-radius:5px;
@@ -15,11 +19,13 @@
 -moz-box-shadow:    7px 7px 5px rgba(50, 50, 50, 0.75);
 box-shadow:         7px 7px 5px rgba(50, 50, 50, 0.75);
 	}
-	#mapa li.primero > span{background-color:white;}
+	#mapa li.primero > span{background-color:white;} */
 </style>
 <div id="mapa">
-	<h2 style="text-align:center; width:634px;">Mapa de Invitados</h2>
-	
+	<div style="text-align:center;">
+		<h2 style="text-align:center; width:634px;">Mapa de Socios</h2>
+		<img class="imagen_titulo" src="<?php echo $MOD_WEB_PATH; ?>imagenes/separador_formulario.png" />	
+	</div>
 	 <!-- Begin demo markup -->
 	<div> 
 		<?php

@@ -25,7 +25,7 @@
 	.caja_datos input{width: 202px;}
 </style>
 <![endif]-->
-<script src="<?php echo $MOD_WEB_PATH; ?>js/paginas/afiliate.js"></script>
+<script src="<?php echo $MOD_WEB_PATH; ?>js/afiliate.js"></script>
 
 
 

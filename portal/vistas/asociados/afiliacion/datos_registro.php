@@ -1,6 +1,6 @@
 <style>
 	#datos_registro .caja_datos label{position:relative; right:0; margin-right: 10px; }
-	#datos_registro .error{color:red;display:inline-block;margin-left: 13px;}
+	#datos_registro .error{color:red;display:inline-block;margin-left: 13px; position:absolute;}
 </style>
 
 <div style="margin-top:10px;">Invitado por: <div class="anfitrion" style="display:inline-block;"></div></div>
@@ -22,7 +22,7 @@
 			<label>FECHA DE NACIMIENTO</label><input type="text" name="FechaNac"/> <div class="error FechaNac"></div>
 		</div>
 		<div class="caja_datos">
-			<label>Email</label><input type="text" name="Email"/> <div class="error Email"></div>
+			<label>EMAIL</label><input type="text" name="Email"/> <div class="error Email"></div>
 		</div>
 		<div class="caja_datos">
 			<label>DIRECCION</label><input type="text" name="Direccion" />
