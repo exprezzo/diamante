@@ -14,9 +14,9 @@
 
 
 	
-	<!--Theme
-	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/themes/black-tie/jquery-ui.css" rel="stylesheet" type="text/css" />		-->
-	<link href="http://cdn.wijmo.com/themes/rocket/jquery-wijmo.css" rel="stylesheet" type="text/css" />		
+	<!--Theme-->
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/themes/black-tie/jquery-ui.css" rel="stylesheet" type="text/css" />		
+	
 	
 	
 	<!--Wijmo Widgets CSS-->
@@ -25,6 +25,7 @@
 	<script type="text/javascript" src="<?php echo $APP_PATH; ?>web/libs/coin-slider/coin-slider.min.js"></script>
 	<link rel="stylesheet" href="<?php echo $APP_PATH; ?>web/libs/coin-slider/coin-slider-styles.css" type="text/css" />
 	
+
 	<link type="text/css"rel="StyleSheet" href="<?php echo $MOD_WEB_PATH; ?>css/estilos.css" />
 	<!--[if IE]>
 	<style>

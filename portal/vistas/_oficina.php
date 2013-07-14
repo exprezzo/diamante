@@ -26,6 +26,7 @@
 	
 	
 	<link type="text/css"rel="StyleSheet" href="<?php echo $MOD_WEB_PATH; ?>css/estilos.css" />
+	<link type="text/css"rel="StyleSheet" href="<?php echo $MOD_WEB_PATH; ?>css/estilos_oficina.css" />
 	<!--[if IE]>
 	<style>
 		.slider{height:253px;}

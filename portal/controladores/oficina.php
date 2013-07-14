@@ -1,4 +1,5 @@
 <?php
+require_once $APPS_PATH.$_PETICION->modulo.'/modelos/recarga_modelo.php';
 class Oficina extends Controlador{
 	function servir(){
 		//-----------------------------------------
@@ -110,7 +111,72 @@ class Oficina extends Controlador{
 		return $res;
 	}
 	
+	function estado(){
 	
+		$socioId =  $_SESSION['AuthInfo']['UserInfo']['SocioID'];
+		$params=array(
+			'filtros'=>array(
+				array(
+					'filterOperator'=>'equals',
+					'filterValue'=>$socioId,
+					'dataKey'=>'SocioID'
+				),
+				array(
+					'filterOperator'=>'equals',
+					'filterValue'=>'',
+					'dataKey'=>'DepositoId'
+				)
+				
+			)
+		);
+		$mod=new recargaModelo();		
+		$res   = $mod->buscar( $params );				
+		
+		$vista=$this->getVista();
+		$vista->res = $res;
+		$this->mostrarVista();
+		
+	}
+	function pedidos(){
+		if ($_SERVER['REQUEST_METHOD']=='GET'){
+			$this->mostrarVista();
+		}
+		
+		// quitar comas y signo $ al numero		
+		// dar formato a la fecha
+		// obtener el id del asociado logeado
+		
+		
+		$importe=str_replace( "$" , "" , $_POST['Importe'] );
+		$importe=str_replace( "," , "" , $importe );
+		$fecha=DateTime::createFromFormat ( 'm/d/Y' , $_POST['Fecha'] );
+		$socioId =  $_SESSION['AuthInfo']['UserInfo']['SocioID'];
+		
+		// print_r($_POST);
+		// echo $fecha->format('Y-m-d'); exit;
+		$datos = array(
+			'RecargaId'=>0,
+			'Importe'=>$importe,
+			'Fecha'=>$fecha->format('Y-m-d'),
+			'SocioID'=>$socioId
+		);
+		
+		$mod=new recargaModelo();		
+		$res   = $mod->guardar( $datos );
+		if ($res['success']){
+			global $_PETICION;		
+			$_PETICION->accion='pedido_exito';
+			global $APP_PATH;
+			header('Location: '.$APP_PATH.'oficina/pedido_exito'); exit;
+		}else{
+			$vista=$this->getVista();
+			$vista->datos=$datos;
+			$vista->error=$res;			
+		}
+		
+		
+		$this->mostrarVista();
+	}
 	
 	function login(){
 		

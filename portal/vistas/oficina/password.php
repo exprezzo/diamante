@@ -3,6 +3,11 @@
 	#form_password .caja_datos label {right: 433px; }
 	#form_password .error{color: red; display: inline-block;margin-left: 13px;position: absolute;margin-top: 6px;}
 </style>
+<script>
+	$(function(){
+		$('#form_password input').wijtextbox();
+	});
+</script>
 <form style="text-align:center;margin-top:30px;" id="form_password">
 	
 	<div class="datos">
