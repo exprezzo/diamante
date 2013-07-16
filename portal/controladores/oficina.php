@@ -1,5 +1,9 @@
 <?php
 require_once $APPS_PATH.$_PETICION->modulo.'/modelos/recarga_modelo.php';
+require_once $APPS_PATH.$_PETICION->modulo.'/modelos/pago_modelo.php';
+require_once $APPS_PATH.$_PETICION->modulo.'/modelos/cuenta_modelo.php';
+
+
 class Oficina extends Controlador{
 	function servir(){
 		//-----------------------------------------
@@ -111,8 +115,62 @@ class Oficina extends Controlador{
 		return $res;
 	}
 	
+	function pagar(){
+		$vista=$this->getVista();
+		
+		if ($_SERVER['REQUEST_METHOD']=='GET' ){
+			$mod=new recargaModelo();		
+			$params=array('RecargaId'=> $_GET['recargaid'] );
+			$recarga = $mod->obtener($params);
+			
+			$vista->recarga =$recarga ;
+			
+			$modCuenta=new cuentaModelo();
+			$res = $modCuenta->buscar( array() );
+			$vista->cuentas = $res;
+			$this->mostrarVista();
+		}
+		// $vista->recarga =array('RecargaId'=>0, 'Importe'=>0,'Fecha'=>'');
+		// return $this->mostrarVista();
+		
+		$importe=str_replace( "$" , "" , $_POST['Importe'] );
+		$importe=str_replace( "," , "" , $importe );
+		$fecha=DateTime::createFromFormat ( 'm/d/Y' , $_POST['Fecha'] );
+		$socioId =  $_SESSION['AuthInfo']['UserInfo']['SocioID'];
+		
+		
+		$datos = array(
+			'RecargaId'=>$_POST['RecargaId'],
+			'Importe'=>$importe,
+			'Fecha'=>$fecha->format('Y-m-d'),
+			'AplicadoPor_usuarioid'=>$socioId,
+			'Cuentaid'=>$_POST['Cuentaid']
+		);
+		
+		$mod=new pagoModelo();		
+		$res   = $mod->guardar( $datos );
+		if ($res['success']){
+			$mod=new recargaModelo();		
+			$params=array(
+				'RecargaId'=> $_POST['RecargaId'],
+				'status'=>2
+			);
+			$recarga = $mod->guardar($params);
+		
+			global $_PETICION;		
+			$_PETICION->accion='pago_exito';
+			global $APP_PATH;
+			header('Location: '.$APP_PATH.'oficina/pago_exito'); exit;
+		}else{
+			$vista=$this->getVista();
+			$vista->datos=$datos;
+			$vista->error=$res;			
+		}
+		$this->mostrarVista();
+		
+	}
 	function estado(){
-	
+		$vista=$this->getVista();
 		$socioId =  $_SESSION['AuthInfo']['UserInfo']['SocioID'];
 		$params=array(
 			'filtros'=>array(
@@ -130,10 +188,29 @@ class Oficina extends Controlador{
 			)
 		);
 		$mod=new recargaModelo();		
-		$res   = $mod->buscar( $params );				
+		$res   = $mod->buscar( $params );
+		$vista->porPagar = $res;
 		
-		$vista=$this->getVista();
-		$vista->res = $res;
+		$params=array(
+			'filtros'=>array(
+				array(
+					'filterOperator'=>'equals',
+					'filterValue'=>$socioId,
+					'dataKey'=>'SocioID'
+				),
+				array(
+					'filterOperator'=>'greater',
+					'filterValue'=>'',
+					'dataKey'=>'DepositoId'
+				)
+				
+			)
+		);
+		$pagadas   = $mod->buscar( $params );
+		$vista->pagadas=$pagadas;
+		
+		
+		
 		$this->mostrarVista();
 		
 	}
