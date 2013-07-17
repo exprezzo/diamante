@@ -2,6 +2,10 @@
 	font-family: "Accidental Presidency";
 	src:  url("../fonts/accidentalpresidency/accid___.woff") format("woff"), url(../fonts/accidentalpresidency/accid___.ttf) format("truetype");
 }
+
+#cs-buttons-coin-slider{margin-top: -35px; z-index:2; }
+#coin-slider{ z-index:1;}
+
 img{border:none;}
 body{background-color: #464646;background-image:url(../imagenes/patternfondodiamondpeople.png);background-size:4px;}
 .header{background-image: url('../imagenes/fondo_header.png');width: 979px;height: 78px; display:inline-block; color:white; text-align:center; border-bottom:3px solid white;}
@@ -62,3 +66,16 @@ body{padding:0;margin:0;}
 #contenido .ui-button span{font-size:14px;}
 #datos_registro .caja_datos label{margin-left:31px;}
 
+#contacto .caja_datos{margin-left:63px;}
+#contacto textarea{font-size:14px; font-family:'courier'}
+
+#contacto .caja_datos label {
+	text-align: left;
+	display: block;
+	position: relative;
+	right:0;
+
+}
+#contacto .caja_datos input{
+
+}

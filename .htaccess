@@ -8,8 +8,8 @@
 	#RewriteRule ^login$ core/entrada.php/sistema/usuarios2/login$1 [L]
 	#RewriteRule ^login/$ core/entrada.php/sistema/usuarios2/login$1 [L]		
 	
-	RewriteRule ^$ core/entrada.php/portal/paginas/afiliate$1 [L]
-	RewriteRule ^/$ core/entrada.php/portal/paginas/afiliate$1 [L]
+	RewriteRule ^$ core/entrada.php/portal/asociados/afiliate$1 [L]
+	RewriteRule ^/$ core/entrada.php/portal/asociados/afiliate$1 [L]
 	
 	RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
