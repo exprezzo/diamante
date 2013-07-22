@@ -2,6 +2,7 @@
 require_once $APPS_PATH.$_PETICION->modulo.'/modelos/recarga_modelo.php';
 require_once $APPS_PATH.$_PETICION->modulo.'/modelos/pago_modelo.php';
 require_once $APPS_PATH.$_PETICION->modulo.'/modelos/cuenta_modelo.php';
+require_once $APPS_PATH.$_PETICION->modulo.'/modelos/deposito_modelo.php';
 
 
 class Oficina extends Controlador{
@@ -30,7 +31,8 @@ class Oficina extends Controlador{
 		
 	}
 	function salir( ){
-		unset($_SESSION['AuthInfo']);
+		unset($_SESSION['AuthInfo']['UserInfo']);
+		unset($_SESSION['AuthInfo']['IsLoged']);
 		global $APP_PATH;			
 		header('Location: '.$APP_PATH.'oficina/entrar#contenido');
 	}
@@ -128,7 +130,7 @@ class Oficina extends Controlador{
 			$modCuenta=new cuentaModelo();
 			$res = $modCuenta->buscar( array() );
 			$vista->cuentas = $res;
-			$this->mostrarVista();
+			return $this->mostrarVista();
 		}
 		// $vista->recarga =array('RecargaId'=>0, 'Importe'=>0,'Fecha'=>'');
 		// return $this->mostrarVista();
@@ -140,14 +142,17 @@ class Oficina extends Controlador{
 		
 		
 		$datos = array(
+			'DepositoId'=>0,
 			'RecargaId'=>$_POST['RecargaId'],
 			'Importe'=>$importe,
-			'Fecha'=>$fecha->format('Y-m-d'),
-			'AplicadoPor_usuarioid'=>$socioId,
-			'Cuentaid'=>$_POST['Cuentaid']
+			'FechaDeposito'=>$fecha->format('Y-m-d'),
+			'SocioId'=>$socioId,
+			'CuentaId'=>$_POST['Cuentaid'],
+			'Ficha'=>$_POST['Ficha']
+			
 		);
 		
-		$mod=new pagoModelo();		
+		$mod=new depositoModelo();		
 		$res   = $mod->guardar( $datos );
 		if ($res['success']){
 			$mod=new recargaModelo();		
@@ -165,6 +170,7 @@ class Oficina extends Controlador{
 			$vista=$this->getVista();
 			$vista->datos=$datos;
 			$vista->error=$res;			
+			print_r($vista->error);
 		}
 		$this->mostrarVista();
 		

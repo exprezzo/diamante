@@ -1,6 +1,7 @@
 <?php
 require_once $APPS_PATH.$_PETICION->modulo.'/modelos/asociado_modelo.php';
 require_once $APPS_PATH.$_PETICION->modulo.'/modelos/compania_modelo.php';
+require_once $APPS_PATH.$_PETICION->modulo.'/modelos/recarga_modelo.php';
 class asociados extends Controlador{
 	var $modelo="asociado";
 	var $campos=array('SocioID','Nombres','Apellidos','FechaNac','Direccion','Colonia','Ciudad','EstadoId','CodigoPostal','Celular','CompaniaId','CotitularNombre','CotitularFechaNac','CLABE','BancoID');
@@ -74,6 +75,16 @@ class asociados extends Controlador{
 		if ( $res['success'] && !empty($res['datos']) && !empty($res['datos']['SocioID'])  ){
 			$_SESSION['NuevoSocioID'] = $res['datos']['SocioID'];			
 			$_SESSION['Socio'] = $res['datos'];			
+			
+			$params=array(
+				'RecargaId'	=>0,
+				'SocioID'	=>$_SESSION['NuevoSocioID'],
+				'Fecha'		=>date("Y-m-d H:i:s"),
+				'Importe'	=>178.5				
+			);
+			
+			$mod=new recargaModelo();
+			$res = $mod->guardar( $params );
 		}
 		
 	}

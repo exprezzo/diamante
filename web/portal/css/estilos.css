@@ -37,11 +37,20 @@ body{padding:0;margin:0;}
 .footer_abajo{width:100%; height:45px; background-color:white; text-align:center; color:black;}
 .footer_abajo label{line-height:45px; font-family:"Times New Roman"}
 
-.menu_item{width:235px; margin-bottom:41px;  margin-left:32px;  }
+
+
 .menu_item a{text-decoration:none;}
 .menu_header{background-image: url(../imagenes/menu_item_bkg.png); background-repeat:no-repeat; font-family: "Accidental Presidency", sans-serif; color:#464646;}
 .menu_header div{margin-top: 2px;position: relative;display: inline-block;font-size: 25px;margin-left: 6px; cursor:pointer; }
-.menu_items{margin-top:64px;}
+
+.menu_items {
+margin-top: 44px;
+}
+.menu_item {
+width: 235px;
+margin-bottom: 20px;
+margin-left: 32px;
+}
 .menu_divisor{width:225px; height:2px; background-color: #4e4e4e;  display:inline-block; position:absolute; text-align:center; margin-left:4px;  margin-top:4px; }
 .menu_descripcion{font-size:15px; text-align:center; margin-top:9px; font-family: "Accidental Presidency", sans-serif; color:#4f4f4f;}
 .links_interes{left: 50%;position: relative;margin-left: -53.5px;}

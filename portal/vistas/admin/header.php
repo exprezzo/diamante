@@ -2,8 +2,8 @@
 	$(document).ready(function() {
 		$('#coin-slider').coinslider({
 		width: 330, // width of slider panel
-		height: 252
-
+		height: 252// height of slider panel		
+		
 		});
 	});
 </script>
@@ -16,10 +16,10 @@
 .cs-buttons a{z-index:1}
 .cs-buttons a.cs-active{ border: 3px solid white;}
 .cs-buttons a:hover{ border: 3px solid #00afef; }
-#cs-navigation-coin-slider{visibility:hidden;}
+
 </style>
 
-<div class="banner_wrap" >
+<div class="banner_wrap">
 	<div class="banner">
 		<div class="slider">			
 			<div id='coin-slider'>

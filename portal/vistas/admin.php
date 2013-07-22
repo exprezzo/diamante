@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!--meta http-equiv="X-UA-Compatible" content="IE=8"/-->
-	
-	
-	
+	<title>Admin</title>
+	<!--meta http-equiv="X-UA-Compatible" content="IE=8"/-->	
 	<script src="<?php echo $APP_PATH; ?>web/libs/jquery-1.8.3.js" ></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" ></script>	
 	<link type="text/css"rel="StyleSheet" href="http://code.jquery.com/ui/1.10.3/themes/dark-hive/jquery-ui.css" />	
@@ -12,21 +10,18 @@
 	<!--Wijmo Widgets JavaScript-->	
 	<script src="http://cdn.wijmo.com/jquery.wijmo-open.all.3.20131.1.min.js" type="text/javascript"></script>
 
-
 	<!--Theme
 	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/themes/black-tie/jquery-ui.css" rel="stylesheet" type="text/css" />		-->
 	<link href="http://cdn.wijmo.com/themes/rocket/jquery-wijmo.css" rel="stylesheet" type="text/css" />		
 	
 	<!--Wijmo Widgets CSS-->
 	<link href="http://cdn.wijmo.com/jquery.wijmo-pro.all.3.20131.1.min.css" rel="stylesheet" type="text/css" />
-
 	
 	<script type="text/javascript" src="<?php echo $APP_PATH; ?>web/libs/coin-slider/coin-slider.min.js"></script>
 	<link rel="stylesheet" href="<?php echo $APP_PATH; ?>web/libs/coin-slider/coin-slider-styles.css" type="text/css" />
+		
+	<link type="text/css"rel="StyleSheet" href="<?php echo $MOD_WEB_PATH; ?>css/estilos.css" />
 	
-	
-	<link type="text/css"rel="StyleSheet" href="<?php echo $MOD_WEB_PATH; ?>css/estilos.css?id=2" />
-	<link type="text/css"rel="StyleSheet" href="<?php echo $MOD_WEB_PATH; ?>css/estilos_oficina.css" />
 	<!--[if IE]>
 	<style>
 		.slider{height:253px;}
@@ -69,33 +64,42 @@
 	</style>
 </head>
 <body>
-	<div class="portal" style="margin-top : 10px;">
+	<div class="portal">
 		<?php $this->mostrar('/paginas/header'); ?>
-			<?php
-			
-			if ( !empty($_SESSION['AuthInfo']) && !empty($_SESSION['AuthInfo']["IsLoged"]) 
+			<?php			
+			if ( !empty($_SESSION['AuthInfo']) && !empty($_SESSION['AuthInfo']["EsAdmin"])
 				// &&  $_PETICION->controlador=='oficina' && ($_PETICION->accion=='entrar' || $_PETICION->accion=='dashboard')
 			)
 			{
 			?>
 			<div id="user_header" style="" >
-				
 				<div style="text-align:center;position:absolute;width:939px;">
-					<h1 class="user_name" style="margin-right:30px;">Bienvenido!</h1><h1 class="user_name" style=""><?php echo utf8_decode($_SESSION['AuthInfo']['UserInfo']['Nombres']).' '.utf8_decode($_SESSION['AuthInfo']['UserInfo']['Apellidos']); ?></h1><h1 class="user_name" style="margin-left:30px;"><?php echo ' #'.$_SESSION['AuthInfo']['UserInfo']['SocioID']; ?></h1>
-				</div>
-				
-				
+					<h1 class="user_name" style="margin-right:30px;">Bienvenido!</h1><h1 class="user_name" style=""><?php echo utf8_decode($_SESSION['AuthInfo']['AdminInfo']['Nombres']).' '.utf8_decode($_SESSION['AuthInfo']['AdminInfo']['Apellidos']); ?></h1><h1 class="user_name" style="margin-left:30px;"></h1>
+				</div>				
 			</div>
 			<?php
-			} 
-			?>			
-		
+			}
+			?>		
 		<div>
-				<?php 
-				if ( !empty($_SESSION['AuthInfo']) && !empty($_SESSION['AuthInfo']["IsLoged"]) ){
-					$this->mostrar('/oficina/menu'); 
+				<?php
+				if ( !empty($_SESSION['AuthInfo']) && !empty($_SESSION['AuthInfo']["EsAdmin"]) ){
+					$this->mostrar('/admin/menu'); 
 				}else{
-					$this->mostrar('/paginas/menu'); 
+					?>
+					<div class="menu_box">
+						<div class="menu_items">							
+							<div class="menu_item">
+								<a href="<?php echo $APP_PATH; ?>paginas/inicio#contenido">
+									<div class="menu_header">
+										<div>HOME</div>
+									</div>
+									<div class="menu_divisor"></div>
+									<div class="menu_descripcion">DESC. CORTA | DESC. CORTA | DESC. CORTA </div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<?php
 				}
 				?>
 				<div id="contenido" class="contenido"><?php $this->mostrar(); ?></div>

@@ -4,10 +4,10 @@
 			<img class="links_interes" src="<?php echo $MOD_WEB_PATH; ?>imagenes/links_de_interes.png" /><br/>
 			<img src="<?php echo $MOD_WEB_PATH; ?>imagenes/separador_h.png" />
 			<ul>
-				<li><a href="afiliate.php">AFILIATE</a></li>
-				<li><a href="videos.php">VIDEOS</a></li>
-				<li><a href="preguntas.php">PREGUNTAS FRECUENTES</a></li>
-				<li><a href="oficina.php">OFICINA VIRTUAL</a></li>
+				<li><a href="<? echo $APP_PATH ?>asociados/afiliate">AFILIATE</a></li>
+				<li><a href="<? echo $APP_PATH ?>paginas/videos">VIDEOS</a></li>
+				<li><a href="<? echo $APP_PATH ?>paginas/preguntas">PREGUNTAS FRECUENTES</a></li>
+				<li><a href="<? echo $APP_PATH ?>oficina/entrar">OFICINA VIRTUAL</a></li>
 			</ul>
 		</div>
 		

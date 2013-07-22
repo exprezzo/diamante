@@ -8,6 +8,7 @@
 	$(function(){
 		 // $('#form_recarga input').wijtextbox();		
 		$("#form_pagar [name='Importe']").wijinputnumber({ type: 'currency', showGroup: true});
+		$("#form_pagar [name='Ficha']").wijtextbox();
 		$("#form_pagar [name='Fecha']").wijinputdate({showTrigger: true  });
 		$("#form_pagar [name='Cuentaid']").wijcombobox();
 		$("#form_pagar button").button();
@@ -37,9 +38,10 @@
 					echo '<option value="'.$cuenta['CuentaID'].'">'.$cuenta['Nombre'].'</option>';
 				}
 				?>
-			</select>
-			
-			
+			</select>			
+		</div>
+		<div class="caja_datos">
+			<label>Ficha</label><input type="text" name="Ficha" value="" style="width:142px;" 	/>
 		</div>
 	</div>
 	<div class="error" style="color:red; width: 270px;"></div>

@@ -6,10 +6,14 @@
 	
 	#RewriteRule ^sistema/usuarios/(.*)$ core/entrada.php/sistema/usuarios2/$1 [L]	
 	#RewriteRule ^login$ core/entrada.php/sistema/usuarios2/login$1 [L]
-	#RewriteRule ^login/$ core/entrada.php/sistema/usuarios2/login$1 [L]		
+	#RewriteRule ^login/$ core/entrada.php/sistema/usuarios2/login$1 [L]
 	
-	RewriteRule ^$ core/entrada.php/portal/asociados/afiliate$1 [L]
-	RewriteRule ^/$ core/entrada.php/portal/asociados/afiliate$1 [L]
+	#RewriteRule ^admin/$ core/entrada.php/portal/admin/inicio$1 [L]
+	#RewriteRule ^admin/$ core/entrada.php/portal/admin/inicio$1 [L]
+	
+	
+	RewriteRule ^$ core/entrada.php/portal/paginas/inicio$1 [L]
+	RewriteRule ^/$ core/entrada.php/portal/paginas/inicio$1 [L]
 	
 	RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
