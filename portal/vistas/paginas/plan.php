@@ -1,7 +1,7 @@
 <script src="<?php echo $APP_PATH; ?>web/libs/wijmo3.2/js/jquery.wijmo-open.all.3.20131.7.min.js" type="text/javascript"></script>
 <script src="<?php echo $APP_PATH; ?>web/libs/wijmo3.2/js/jquery.wijmo-pro.all.3.20131.7.min.js" type="text/javascript"></script>
 <style>
-	.contenido .somos p{font-family:'Accidental Presidency'; text-align:justify;color:#464646; font-size:18px; padding:20px;}
+	.contenido .somos p{ text-align:justify;color:#464646; font-size:18px; padding:20px;}
 	.contenido .somos{text-align:center;}
 	
 
@@ -104,11 +104,11 @@ position: relative;
 			<div style="text-align:center;margin-top:0;">
 				<h2 style="margin:0 0 7px 0;">REGALIAS 4 (personas) X 5 (niveles)</h2>
 			</div>
-			<div>
+			<p>
 			Afilia a 4 personas y estas 4 a otras 4 personas y así hasta el 5 nivel,  y al hacer cada 
 			uno su consumo de tiempo aire a través de Diamond People S.A. de C.V. obtendrás las 
 			siguientes regalías de manera  semanal.
-			</div>
+			</p>
 			
 			<br />
 			<table id="tabla_comisiones">
@@ -175,11 +175,11 @@ position: relative;
 			<div style="text-align:center;margin-top:0;">
 				<h2 style="margin:0 0 7px 0;">REGALIAS 4 (personas) X 5 (niveles)</h2>
 			</div>
-			<div>
+			<p>
 			Ganancias extras por invitado plus .
 			El invitado plus es aquel socio que fue invitado después del haber completado tu primer 
 			nivel de 4 y cuenta del 5to. invitado hasta infinito.
-			</div>
+			</p>
 			
 			<table id="tabla_comisiones2">
 				<thead>

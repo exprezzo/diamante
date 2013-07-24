@@ -60,9 +60,10 @@
 			<img src="<?php echo $MOD_WEB_PATH; ?>imagenes/separador_formulario.png" />								
 		</div>
 		<div style="text-align:center;margin-top:20px;">
-			<div class="shadow" style="color:#464646; text-align: left; display: inline-block;padding: 22px;border-radius: 5px;font-family: 'Accidental Presidency';font-size: 18px;">
+			<div class="shadow" style="color:#464646; text-align: left; display: inline-block;padding: 22px;border-radius: 5px;font-family: 'arial narrow';font-size: 18px;">
 				<div>Manuel Apellido Apellido</div>
-				<div>Correo: manuel@diamondpeople.com.mx</div>
+				<div style="width:285px">Correo: manuel@diamondpeople.com.mx</div>
+				
 				<div>Celular: 669 999999</div>
 			</div>
 		</div>

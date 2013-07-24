@@ -46,11 +46,17 @@
          -o-transform:skew(8deg) rotate(3deg);
             transform:skew(8deg) rotate(3deg);
 }
+#contenido{
+	z-index:1;
+	position:relative;
+}
+.sombra_banner{
+	position: relative;
+	z-index: 2;
+}
 </style>
 <div style="padding:10px 30px 10px 30px;">
-	<h2>Bienvenido!</h2>
-
-	
+	<h2>Bienvenido!</h2>	
 	<p>
 	Únete a nuestra comunidad de emprendedores!, tienes ante ti la oportunidad de aumentar tus ingresos, invita a tus amigos, 
 	conocidos y familiares a unirse a esta comunidad, y veras como todos salen ganando!.

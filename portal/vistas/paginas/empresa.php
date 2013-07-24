@@ -1,5 +1,5 @@
 <style>
-	.contenido .somos p{font-family:'Accidental Presidency'; text-align:justify;color:#464646; font-size:18px;}
+	.contenido .somos p{ text-align:justify;color:#464646; font-size:18px;}
 	.contenido .somos{text-align:center;}
 	
 .caja-sombra 
