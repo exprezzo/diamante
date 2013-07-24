@@ -12,6 +12,8 @@
 		$("#form_pagar [name='Fecha']").wijinputdate({showTrigger: true  });
 		$("#form_pagar [name='Cuentaid']").wijcombobox();
 		$("#form_pagar button").button();
+		
+		document.location.href="#user_header";
 	});
 </script>
 <style>

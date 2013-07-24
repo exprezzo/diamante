@@ -15,17 +15,11 @@
     
     <ul class="youtube-videogallery" style="text-align:center; margin-top:80px;margin-left:17px;">
 		
-		<li><a href="http://www.youtube.com/watch?v=pAwR6w2TgxY">Pogo - Alice</a></li>
-		<li><a href="http://www.youtube.com/watch?v=JVxe5NIABsI">Pogo - Upular</a></li>
-		<li><a href="http://www.youtube.com/watch?v=UlS_Rnb5WM4">Pogo - Skynet</a></li>		
-        <li><a href="http://www.youtube.com/watch?v=qs1bG6BIYlo">Pogo - Wishery (Snow White Remix)</a></li>
-        <li><a href="http://www.youtube.com/watch?v=CjgT8Af1kGc">Bad scooting</a></li>
-        <li><a href="http://www.youtube.com/watch?v=4psVnsYlBok">Good scooting</a></li>
-        <li><a href="http://www.youtube.com/watch?v=05Cgtg_N4eI">Knitting</a></li>
-        <li><a href="http://www.youtube.com/watch?v=xPr4g7o46DY">Sunrise yoga</a></li>
-        <li><a href="http://www.youtube.com/watch?v=pocEg6a6ZpM">YUI Roundtable</a></li>
-        <li><a href="http://www.youtube.com/watch?v=ishBOmjHoXE">Sporting moments</a></li>
-        <li><a href="http://www.youtube.com/watch?v=j_OyHUqIIOU">Big red balloon</a></li>
-        <li><a href="http://www.youtube.com/watch?v=0Yww2VhbFL8">Tango!</a></li>
+		<li><a href="http://www.youtube.com/watch?v=MMz8RVT6hKY">Que es el mercadeo en red.</a></li>
+		<li><a href="http://www.youtube.com/watch?v=ndqhlhP7jhY">Ventajas de las Redes de Mercadeo.</a></li>
+		<li><a href="http://www.youtube.com/watch?v=6ReYYtc_tyY">¿Qué es el Network Marketing?</a></li>		
+        <li><a href="http://www.youtube.com/watch?v=GnBnwJwYgAQ">Mercadeo en red,Negocios Multinivel vs Negocios tradicionales</a></li>
+        <li><a href="http://www.youtube.com/watch?v=3cGkUlJjnSw">Como evoluciono el Marketing Multinivel-Redes de mercadeo-mlm</a></li>
+        <li><a href="http://www.youtube.com/watch?v=C0zU1MvjMmM">NETWORK MARKETING, REDES DE MERCADEO, LA TENDENCIA DE NEGOCIOS A NIVEL GLOBAL, NO TE QUEDES FUERA</a></li>	        
     </ul>
 </div>

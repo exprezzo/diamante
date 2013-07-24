@@ -1,6 +1,6 @@
 <style>
 #preguntas_frecuenes{
-	padding:5px;
+	
 }
 
 #preguntas_frecuenes h3{
@@ -20,13 +20,83 @@
 #contenido{
 	height:auto;
 }
+
+
+.caja-sombra 
+{
+  position: relative;
+  width: 85%;
+  background: white;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 2em 1.5em;
+  color: rgba(0,0,0, .8);
+  text-shadow: 0 1px 0 #fff;
+  line-height: 1.5;
+  margin: 22px auto;  
+  color:#464646;
+  font-size:18px; 
+  webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+
+}
+
+.caja-sombra:before, .caja-sombra:after 
+{
+  z-index: -1; 
+  position: absolute; 
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%; 
+  top: 80%;
+  max-width:300px;
+  background: rgba(0, 0, 0, 0.7); 
+  -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7);   
+  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -webkit-transform: rotate(-3deg);    
+  -moz-transform: rotate(-3deg);   
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+.caja-sombra:after 
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+#contenido{
+z-index: 1;
+position: relative;
+
+
+}
+
 </style>
-<div id="preguntas_frecuenes" style="">
+
+<script>
+	$(function(){
+				
+		var h = $('#contenido').height();
+		$('.menu_box').height( h +14 );
+	});
+	
+</script>
+<div id="preguntas_frecuenes" style="" class="caja-sombra">
 	<div style="text-align:center;">
 		<h2>Preguntas Frecuentes</h2>		
 		<img src="<?php echo $MOD_WEB_PATH; ?>imagenes/separador_formulario.png" />								
 	</div>
-	<div style="padding:15px;">
+	<div style="padding:15px;" >
 		<div class="pregunta">
 			<h3>1.- VOY A VENDER TIEMPO AIRE?</h3>
 			<p>No </p>
