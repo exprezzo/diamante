@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="<?php echo $APP_PATH; ?>web/libs/coin-slider/coin-slider-styles.css" type="text/css" />
 	
 
-	<link type="text/css"rel="StyleSheet" href="<?php echo $MOD_WEB_PATH; ?>css/estilos.css?id=3" />
+	<link type="text/css"rel="StyleSheet" href="<?php echo $MOD_WEB_PATH; ?>css/estilos.css?id=4" />
 	<!--[if IE]>
 	<style>
 		.slider{height:253px;}

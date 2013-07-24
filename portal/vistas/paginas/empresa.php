@@ -2,6 +2,7 @@
 	.contenido .somos p{ text-align:justify;color:#464646; font-size:18px;}
 	.contenido .somos{text-align:center;}
 	
+	
 .caja-sombra 
 {
   position: relative;
@@ -70,7 +71,7 @@ position: relative;
 	$(function(){
 				
 		var h = $('#contenido').height();
-		$('.menu_box').height( h -40);
+		$('.menu_box').height( h +14);
 			
 		setTimeout(function() {
 			var h = $('#contenido').height();
@@ -81,12 +82,11 @@ position: relative;
 	
 </script>
 
-	<div class="somos caja-sombra"> 
-		<div style="width:373px;height:205px;border:6px solid #464646;background-color:white; display:inline-block;margin:10px auto;"> 
-			<img style="" src='<?php echo $MOD_WEB_PATH; ?>imagenes/empresa.jpg' >
-		</div>
+	<div class="somos caja-sombra" style="background-image: url(http://localhost/diamante/web/portal/imagenes/empresa.jpg);
+			background-repeat: no-repeat;background-size: 195px;background-position:25px 10px;"> 
 		
-		<h2>¿QUIENES SOMOS?</h2>	
+		
+		<h2 style="margin-top:23px;	">¿QUIENES SOMOS?</h2>	
 		<img src="<?php echo $MOD_WEB_PATH; ?>imagenes/separador_formulario.png" />
 		<p style=" ">
 		Diamond people S.A. de C.V. es una empresa mexicana legalmente constituida que nace ante la 
