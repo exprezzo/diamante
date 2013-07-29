@@ -54,6 +54,24 @@
 	position: relative;
 	z-index: 2;
 }
+
+.paper h2{
+	margin-top:-5px;
+}
+.paper1{
+	transform:rotate(-1deg);
+-ms-transform:rotate(-1deg); /* IE 9 */
+-webkit-transform:rotate(-1deg); /* Safari and Chrome */
+ 
+}
+
+.paper p{line-height: 28px; margin-top: 6px; }
+.paper2{
+	transform:rotate(1deg);
+-ms-transform:rotate(1deg); /* IE 9 */
+-webkit-transform:rotate(1deg); /* Safari and Chrome */
+line-height: 28px; margin-top: 6px; 
+}
 </style>
 <div style="padding:10px 30px 10px 30px;">
 	<h2>Bienvenido!</h2>	
@@ -68,14 +86,14 @@
 	testimonios de nuestros socios:<br>
 	
 	
-	<div class=" paper" style="margin-top:20px;">
+	<div class=" paper paper1" style="margin-top:20px;">
 		<h2>Jose Rodriguez</h2>
 		<p>“Tengo 3 semanas siendo socio de la comunidad DiamondPeople y he empezado a ganar $1000.00 semanales!, solo haciendo las recargas que siempre hacia.”
 		</p>
 	</div>
 	
 		
-	<div class="paper" style="margin-top:40px;">
+	<div class="paper paper2" style="margin-top:40px;">
 		<h2>Fulanito de Tal</h2>
 		<p>“Invite a toda mi familia y amigos, y ahora gano $10,000.00 pesos semanales de la comunidad!”</p>
 	</div>

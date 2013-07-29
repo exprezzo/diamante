@@ -155,7 +155,7 @@ position: relative;
 					  <td>1024</td>
 					  <td>16</td>
 					  <td>16384</td>
-					  <td>2016	</td>
+					  <td>20016	</td>
 					  
 					</tr>
 					
@@ -164,7 +164,7 @@ position: relative;
 					  <td>1364</td>
 					  <td>54</td>
 					  <td>20016</td>
-					  <td>2016</td>
+					  <td>20016</td>
 					  
 					</tr>
 				</tbody>

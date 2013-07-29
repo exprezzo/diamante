@@ -100,19 +100,19 @@ heredarla a sus descendientes  mejorando así su estilo de vida. <br />
 Las recargas telefónicas aplican para cualquier tipo de compañía existente en nuestro país.
 		</p>
 		<div>
-			<div style="width:122px;height:65px;border:2px solid #464646;background-color:white; display:inline-block;margin:10px auto;"> 
+			<div style="width:122px;height:65px;background-color:white; display:inline-block;margin:10px auto;"> 
 				<img style="width:122px;height:65px;" src='<?php echo $MOD_WEB_PATH; ?>imagenes/companias/iusacell.jpg' >
 			</div>
-			<div style="width:122px;height:65px;border:2px solid #464646;background-color:white; display:inline-block;margin:10px auto;"> 
+			<div style="width:122px;height:65px;background-color:white; display:inline-block;margin:10px auto;"> 
 				<img style="width:122px;height:65px;" src='<?php echo $MOD_WEB_PATH; ?>imagenes/companias/movistar2.jpg' >
 			</div>
-			<div style="width:100px;height:65px;border:2px solid #464646;background-color:white; display:inline-block;margin:10px auto;"> 
+			<div style="width:100px;height:65px;background-color:white; display:inline-block;margin:10px auto;"> 
 				<img style="width:100px;height:65px;" src='<?php echo $MOD_WEB_PATH; ?>imagenes/companias/nextel2.jpg' >
 			</div>
-			<div style="width:122px;height:65px;border:2px solid #464646;background-color:white; display:inline-block;margin:10px auto;"> 
+			<div style="width:122px;height:65px;background-color:white; display:inline-block;margin:10px auto;"> 
 				<img style="width:122px;height:65px;" src='<?php echo $MOD_WEB_PATH; ?>imagenes/companias/telcel.jpg' >
 			</div>
-			<div style="width:122px;height:65px;border:2px solid #464646;background-color:white; display:inline-block;margin:10px auto;"> 
+			<div style="width:122px;height:65px;background-color:white; display:inline-block;margin:10px auto;"> 
 				<img style="width:122px;height:65px;" src='<?php echo $MOD_WEB_PATH; ?>imagenes/companias/unefon.jpg' >
 			</div>
 			

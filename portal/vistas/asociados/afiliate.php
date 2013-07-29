@@ -2,6 +2,7 @@
 	<script src="<?php echo $APP_PATH; ?>web/libs/wijmo3.2/js/jquery.wijmo-open.all.3.20131.7.min.js" type="text/javascript"></script>
 	<script src="<?php echo $APP_PATH; ?>web/libs/wijmo3.2/js/jquery.wijmo-pro.all.3.20131.7.min.js" type="text/javascript"></script>
 	
+	
 <?php 
 	unset( $_SESSION['NuevoSocioID'] );  //esta variable se usa en el proceso de registro, contendra el ID del nuevo socio
 ?>
@@ -36,14 +37,17 @@
 <script type="text/javascript">	
 	$(document).ready(function(){			
 		
-		Afiliate.init();
+		Afiliate.init();		
+		
 	});
+	
 </script>
 
 <div class="afiliate">
 	<h2 class="titulo">AFILIATE</h2>	
 	<img class="imagen_titulo" src="<?php echo $MOD_WEB_PATH; ?>imagenes/separador_formulario.png" />
 	<div class="pasos_afiliacion">
+		
 		<div class="paso1" style="position:absolute;display:visible;">
 			<form id="form_buscar_socio">
 			<div class="caja_datos" style="text-align: left;margin-left: 168px;margin-top:20px; ">		
